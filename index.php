@@ -5,6 +5,8 @@ define('ROOT',__DIR__.'/');
 define('CORE',ROOT.'core');
 define('APP',ROOT.'app');
 define('WEB_NAME','app');
+define('TPL',APP.'/home/view/');
+define('VENDOR',ROOT.'vendor/');
 
 //时间设置
 date_default_timezone_set("PRC");
@@ -33,6 +35,9 @@ include(CORE.'/common/function.php');
 
 //框架
 include(CORE.'/wangk.php');
+
+//设置模板引擎
+define('TEMPLATE',2); //1PHP 2smarty 3twig
 
 //自动加载
 spl_autoload_register('\core\wangk::load');

@@ -9,7 +9,17 @@ use core\lib\ctrl;
 class helloCtrl extends Ctrl{
 
 	public function __construct(){
-		
+		//2
+		parent::__construct();
+	}
+
+	public function hi(){
+		$data = 'hello php';//echo 1111133;
+		$data2 = array(123,33,55);//echo 1111133;
+		$this->assign('data',$data);
+		$this->assign('data2',$data2);
+		$this->display('hi');
+
 	}
 
 	public function index(){
@@ -48,7 +58,7 @@ class helloCtrl extends Ctrl{
 		//dump($rst->rowCount());
 		
 		//twig模板
-		$data = 'hello php';
+		$data = 'hello php';//echo 1111133;
 		$this->assign('data',$data);
 		$this->display('hello/index');
 	}
