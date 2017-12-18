@@ -1,9 +1,9 @@
 {
 	"name":"MYMVC",
-	"description":"PHP Framework",
+	"description":"PHP Framework By wangk",
 	"type":"Framework",
 	"keywords":[
-		"PHP Framework","PHP"
+		"wangk","PHP Framework","PHP"
 	],
 	"require": {
         "php": ">= 5.3.0",
