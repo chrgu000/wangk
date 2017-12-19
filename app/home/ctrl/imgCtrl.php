@@ -10,7 +10,23 @@ class ImgCtrl extends Ctrl{
 			dump($_POST);
 			dump($_FILES);
 		}
-		$this->display('img/add');
+		$this->display('add');
+
+	}
+
+
+
+	public function save(){
+
+		dump($_FILES);
+
+		// $res = $this->_uploadObj->upload();
+
+  //       if($res) {
+  //           return '/' .self::UPLOAD . '/' . $res['file']['savepath'] . $res['file']['savename'];
+  //       }else{
+  //           return false;
+  //       }
 
 	}
 

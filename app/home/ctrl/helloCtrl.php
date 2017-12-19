@@ -5,6 +5,7 @@ use core\wangk;
 use core\lib\conf;
 use app\home\model\helloModel;
 use core\lib\ctrl;
+use core\lib\page;
 
 class helloCtrl extends Ctrl{
 
@@ -78,6 +79,29 @@ class helloCtrl extends Ctrl{
 		$rst = $this->rst(1,'ok',$_POST);
 		p($rst);
 		//$this->redirect('index');
+	}
+
+	// 分页
+	public function goodsList(){
+	//p($_GET);
+		$model = new model();
+		$data = $model->select('php34_goods','*');
+		//分页处理
+		$count = count($data);
+		$page = new Page($count,3);
+		$_limit = $page->myLimit;
+		$_limit = explode(',', $_limit);
+		
+		$offset = $_limit[0];
+		$limit = $_limit[1];
+
+		$data = $model->select('php34_goods','*',['LIMIT'=>[$offset, $limit]]);
+		$page = $page -> fpage(array(3,4,5,6,7,8));	
+		//数据分配
+		$this->assign('data',$data);
+		$this->assign('page',$page);
+	//dump($page);
+		$this->display('goodsList');
 	}
 }
 
