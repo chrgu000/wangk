@@ -31,7 +31,7 @@ ssh
         客户端 
 	  yum install openssh-clients
 
-文件操作
+文件操作:https://www.cnblogs.com/laov/p/3541414.html
    yum的CURD
       yum install  vim
       yum remove vim
@@ -64,7 +64,15 @@ ssh
 	
 	alias         对命令重命名 如：alias showmeit="ps -aux" ，另外解除使用unaliax showmeit
 	kill          杀死进程，可以先用ps 或 top命令查看进程的id，然后再用kill命令杀死进程。
-    
+   
+   关机/重启机器
+	shutdown
+	    -r        关机重启
+	    -h        关机不重启
+	    now       立刻关机
+	halt          关机
+	reboot        重启
+
    文件操作
         文件结构树   tree打印
 	ls　　       显示文件或目录
