@@ -11,7 +11,10 @@ class HuiCtrl extends Ctrl{
 		$this->display('index');
 	}
 
-	
+	//nav
+	public function nav(){
+		$this->display('nav');
+	}
 
 	
 }

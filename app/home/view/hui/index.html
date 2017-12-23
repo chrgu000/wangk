@@ -7,171 +7,535 @@
 	<title>hui-ui</title>
 	<link rel="stylesheet" type="text/css" href="/app/public/h-ui/css/H-ui.css">
 	<link rel="stylesheet" type="text/css" href="/app/public/h-ui/css/article.css" />
-<link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/Hui-iconfont/1.0.8/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="/app/public/h-ui/iconfont/iconfont.css" />
 	<script src="/app/public/static/js/jquery-1.8.3.min.js"></script>
 	<script src="/app/public/h-ui/js/H-ui.js"></script>
+	<script type="text/javascript" src="/app/public/plugins/jquery.SuperSlide/jquery.SuperSlide.min.js"></script>
+	<script src="/app/public/h-ui/js/common.js"></script>
 </head>
 <body>
-	<div class="sideBox">
-  <div class="sideTool cl">
-    <a href="javascript:void(0);" class="iReadMode cl"><span class="inight"><i></i></span><span class="iday"><i></i></span></a>
-  </div>
-</div>
-<div class="containBox">
-	<div class="containBox_opbg" style="display:none"></div>
-	<header class="header_top">
-  <div class="Hui-wraper">
-    <nav class="header-nav l"> <a href="/../cases/article/index.shtml" class="home l"><i></i>H-ui</a><a href="/../cases/article/list.shtml" class="l">资讯</a> </nav>
-    <a href="#" class="h-download"><i></i>客户端</a> <i class="tmBtn"></i> </div>
-</header>
-<div class="h_topbar"></div>
-<nav class="mainnav">
-  <ul class="cl">
-    <li><a href="#">直播</a></li>
-    <li><a href="#">资讯</a></li>
-    <li><a href="#">体育</a></li>
-    <li><a href="#">娱乐</a></li>
-    <li><a href="#">图片</a></li>
-    <li><a href="#">视频</a></li>
-    <li><a href="#">社会</a></li>
-    <li><a href="#">情感</a></li>
-    <li><a href="#">猎奇</a></li>
-    <li><a href="#">美女</a></li>
-  </ul>
-</nav>
+	<div class="sideBox" style="height: 3073px;">
+		<div class="sideTool clearfix"> <a href="javascript:void(0);" class="iReadMode cl">
+				<span class="inight"><i></i></span>
+				<span class="iday"><i></i></span>
+			</a> </div>
+		<ul class="nav navbar-nav pt-20">
+			<span id="sidebox1_mboleLogin">
+				<a class="logo navbar-logo-m" href="http://www.jigao616.com/logins.aspx">登陆</a>
+				<a class="logo navbar-logo-m" href="http://www.jigao616.com/regs.aspx">注册</a>
+				
+				<a class="logo navbar-logo-m" href="http://www.jigao616.com/tuijian/">推荐专利</a>
+				<a class="logo navbar-logo-m" href="http://www.jigao616.com/zhuanli/">专利查询</a>
+				<a class="logo navbar-logo-m" href="http://www.jigao616.com/zhuanliliebiao.html">在售专利</a>
+			</span>
+				
+		</ul>
+	</div>
 
-	<div class="Hui-wraper cl pt-10">
-		<div class="AD_1000"><a href="#" target="_blank"><img src="http://images.h-ui.net/www/AD-1000x90.gif" width="1000" height="90"></a></div>
-		<section class="crumb_search cl">
-			<nav class="crumbbar l"><a class="logo" title="网站名称新闻" href="/"></a> <span> <a href="/">首页</a>&gt;<a href="#">新闻中心</a>&gt;<a href="#">二级频道</a>&gt;正文</span> </nav>
-			<article class="searchbar r">
-				<form class="form-search">
-					<div class="input-append">
-						<input type="text" class="input-text" style="width:237px">
-						<button type="submit" class="btn btn-primary">搜索</button>
-					</div>
-				</form>
-			</article>
-		</section>
-		<div class="cl ct2">
-			<section class="mn">
-				<article class="article_show cl">
-					<div class="titlebar">
-						<h1>新闻标题样例 content是内容样式</h1>
-						<div class="titbar cl"> <span>2013-01-22 14:50</span> <span class="where"><a href="#" rel="nofollow">网站名称</a></span> <span class="cishu">点击：3504 </span> <span class="wypl"><a class="maincolor" href="#">我要评论<em>( 20 )</em></a></span>
-							<div class="fontSize">字号：<b title="切换到小字体" class="small" id="fontSmall">T</b>|<b title="切换到大字体" class="big" id="fontbig">T</b></div>
+	<div class="containBox">
+		<div class="containBox_opbg" style="display: none; height: 3073px;"></div>
+		<header class="navbar-wrapper">
+			<div class="navbar navbar-black">
+				<div class="Hui-wraper clearfix"> 
+					<a class="logo navbar-logo hidden-xs" href="">技高网</a>
+					<a class="logo navbar-logo-m visible-xs" href="">技高网首页</a> 
+					<a class="logo navbar-logo-m visible-xs" href="">专利查询</a>
+					<span class="navbar-slogan hidden-xs">
+					<span style="color:#5c5c5c">|</span>&nbsp;&nbsp;科研人员的网站</span>
+					<a class="nav-toggle Hui-iconfont visible-xs tmBtn" href="javascript:;"></a>
+
+					<nav id="Hui-nav" class="nav navbar-nav hidden-xs f-l">
+						<ul class="clearfix">
+							<li id="Huinav_1"> <a href="http://www.jigao616.com/zhuanli/">专利查询</a> </li>
+							<li class="pipe">|</li>
+							<li id="Huinav_2"> <a href="http://www.jigao616.com/tuijian/">推荐专利</a> </li>
+							<li class="pipe">|</li>
+							<li id="Huinav_2"> <a href="http://www.jigao616.com/pinggu.aspx">专利在线评估</a> </li>
+						</ul>
+					</nav>
+					<nav class="nav navbar-nav navbar-userbar hidden-xs f-r">
+						<ul>
+						
+							<li id="Tops1_lidenglu"><a href="http://www.jigao616.com/regs.aspx">注册</a></li>
+							<li id="Tops1_lidenglu2" class="pipe">|</li>
+							<li id="Tops1_lidenglu3"><a href="http://www.jigao616.com/logins.aspx">登录</a></li>	
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+
+		<header class="navbar-wrapper">
+			<div class="navbar navbar-black">
+				<div class="Hui-wraper clearfix"> 
+					<nav id="Hui-nav" class="nav navbar-nav hidden-xs f-l">
+						<ul class="clearfix">
+							<li id="Huinav_1"> <a href="">全部商品分类</a> </li>
+							<li class="pipe">|</li>
+						</ul>
+					</nav>
+					<nav class="nav navbar-nav navbar-userbar hidden-xs f-l">
+						<ul>				
+							<li id="Tops1_lidenglu"><a href="http://www.jigao616.com/regs.aspx">首页</a></li>
+							<li id="Tops1_lidenglu2" class="pipe">|</li>
+							<li id="Tops1_lidenglu3"><a href="http://www.jigao616.com/logins.aspx">电脑频道</a></li>	
+							<li id="Tops1_lidenglu4" class="pipe">|</li>
+							<li id="Tops1_lidenglu5"><a href="http://www.jigao616.com/logins.aspx">家用电器</a></li>	
+							
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+
+
+		<header class="navbar-wrapper" style="display: none">
+			
+				<div class="nav w1210 bc mt10">
+					<!--  商品分类部分 start-->
+					<nav id="Hui-nav" class="nav navbar-nav hidden-xs f-l">
+					<div class="category fl "> <!-- 非首页，需要添加cat1类 -->
+						<div class="cat_hd ">  <!-- 注意，首页在此div上只需要添加cat_hd类，非首页，默认收缩分类时添加上off类，鼠标滑过时展开菜单则将off类换成on类 -->
+							<h2>全部商品分类</h2>
+							<em></em>
+						</div>
+						
+						<div class="cat_bd ">
+						<!-- 循环顶级分类 -->
+												<div class="cat item1">
+								<h3 class=""><a href="/index.php/Home/Search/search/cid/15.html">家用电器</a> <b></b></h3>
+								<div class="cat_detail" style="display: none;">
+									<!-- 循环二级分类 -->
+									<dl class="dl_1st">
+										<dt><a href="/index.php/Home/Search/search/cid/15.html">大家电</a></dt>
+										<dd>
+											<!-- 循环三级分类 -->
+											<a href="/index.php/Home/Search/search/cid/15.html">平板电视</a>
+											<a href="/index.php/Home/Search/search/cid/15.html">空调</a>
+											<a href="/index.php/Home/Search/search/cid/15.html">冰箱</a>
+														
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="/index.php/Home/Search/search/cid/15.html">生活电器</a></dt>
+										<dd>
+											<!-- 循环三级分类 -->
+														
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="/index.php/Home/Search/search/cid/15.html">厨房电器</a></dt>
+										<dd>
+											<!-- 循环三级分类 -->
+														
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="cat ">
+								<h3 class=""><a href="/index.php/Home/Search/search/cid/14.html">手机、数码</a> <b></b></h3>
+								<div class="cat_detail" style="display: none;">
+									<!-- 循环二级分类 -->
+																<dl class="dl_1st">
+										<dt><a href="/index.php/Home/Search/search/cid/14.html">手机配件</a></dt>
+										<dd>
+											<!-- 循环三级分类 -->
+											<a href="/index.php/Home/Search/search/cid/14.html">蓝牙耳机</a>
+											<a href="/index.php/Home/Search/search/cid/14.html">手机饰品</a>
+														
+										</dd>
+									</dl>
+																<dl>
+										<dt><a href="/index.php/Home/Search/search/cid/14.html">数码配件</a></dt>
+										<dd>
+											<!-- 循环三级分类 -->
+											<a href="/index.php/Home/Search/search/cid/14.html">存储卡</a>
+											<a href="/index.php/Home/Search/search/cid/14.html">读卡器</a>
+														
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="cat ">
+								<h3 class=""><a href="/index.php/Home/Search/search/cid/28.html">文化用品</a> <b></b></h3>
+								<div class="cat_detail" style="display: none;">
+									<!-- 循环二级分类 -->
+																<dl class="dl_1st">
+										<dt><a href="/index.php/Home/Search/search/cid/28.html">书</a></dt>
+										<dd>
+											<!-- 循环三级分类 -->
+										<a href="/index.php/Home/Search/search/cid/28.html">php</a>
+										<a href="/index.php/Home/Search/search/cid/28.html">ios</a>
+														
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="cat ">
+								<h3 class=""><a href="/index.php/Home/Search/search/cid/32.html">测试商品分类属性</a> <b></b></h3>
+								<div class="cat_detail" style="display: none;">
+									<!-- 循环二级分类 -->
+								</div>
+							</div>
+							<div class="cat ">
+								<h3 class=""><a href="/index.php/Home/Search/search/cid/33.html">新的分类</a> <b></b></h3>
+								<div class="cat_detail" style="display: none;">
+									<!-- 循环二级分类 -->
+								</div>
+							</div>
 						</div>
 					</div>
-					<div id="cnt_main_article" class="content cl">
-						<p>content是内容样式，14号字体，25px行高，遇到&lt;P&gt;段落标签会自动首行缩进两个字符，如果换行就用&lt;br&gt;。<strong>重点显示就用</strong>&lt;strong&gt;&lt;/strong&gt;便签。切目前主流的门户网站，如：腾讯、网易、新浪等资讯详情页采用的都是这个效果。简单、优雅、规范。</p>
-						<p>再次强烈建议采用最源生的html标签进行手动格式化，抛弃像word那样的后台编辑器，因为它会产生非常多的冗余代码。做过编辑的朋友都知道，如过用cms系统后台自带的编辑器进行可视化编辑是件很辛苦的事。经常把格式搞的一团糟，各种标签如font、内链的style样式一坨一坨的。标签也很容易嵌套出错，或者无法闭合。更重要的一点是冗余的代码增加服务器的负载，影响网页加载速度，很多人可能不在乎这些，那是因为你的网站访问量还没有达到一定的数量级。对于一个访问量千万级的，上亿级别的网站，每节省几个字节都意味着节约更多的带宽，省掉大把的银子。</p>
-						<div align="center"><img alt="图片名称" src="http://images.h-ui.net/www/PIC-480x360.gif" width="480" height="360"></div>
-						<p>如果是从网络上转载文章的编辑，最好将文章先拷贝到记事本去除下格式，然后再进行手动添加标签进行格式化。</p>
-						<p>说到这里肯定会有一些小编喷我了，搞代码那是工程师的事，让我们搞代码，有没有搞错。如果你不会写html编码，那只能说明你还不是个专业的编辑，专业编辑就应该具备一定的html手写编码能力。</p>
-						<p><strong>切忌使用过多的修饰，华而不实，很山寨，很雷人。</strong><a href="#" target="_blank" title="点击进H-ui新闻首页" id="backqqcom" style="white-space: nowrap;"><img width="16" height="16" src="http://static.h-ui.net/www/home/images/favicon.gif"><span style="padding-left: 5px; font-size: 14px;">返回H-ui新闻首页&gt;&gt;</span></a></p>
+					</nav>
+					<!--  商品分类部分 end--> 
+					<nav id="Hui-nav" class="nav navbar-nav hidden-xs f-r">
+					<div class="navitems fl">
+						<ul class="fl">
+							<li class="current"><a href="">首页</a></li>
+							<li><a href="">电脑频道</a></li>
+							<li><a href="">家用电器</a></li>
+							<li><a href="">品牌大全</a></li>
+							<li><a href="">团购</a></li>
+							<li><a href="">积分商城</a></li>
+							<li><a href="">夺宝奇兵</a></li>
+						</ul>
+						<div class="right_corner fl"></div>
 					</div>
-				</article>
-				<article id="sharebar" class="cl mt-20">
-					<section class="share f-l">
-						<div class="bdsharebuttonbox Hui-share">
-							<span class="share-text Hui-iconfont">&#xe715;</span>
-							<a href="#" class="bds_weixin Hui-iconfont" data-cmd="weixin" title="分享到微信">&#xe694;</a>
-							<a href="#" class="bds_qzone Hui-iconfont" data-cmd="qzone" title="分享到QQ空间">&#xe6c8;</a>	
-							<a href="#" class="bds_sqq Hui-iconfont" data-cmd="sqq" title="分享到QQ好友">&#xe67b;</a>
-							<a href="#" class="bds_tsina Hui-iconfont" data-cmd="tsina" title="分享到新浪微博">&#xe6da;</a>
-							<a href="#" class="bds_tqq Hui-iconfont" data-cmd="tqq" title="分享到腾讯微博">&#xe6d9;</a>
-							<a href="#" class="bds_douban Hui-iconfont" data-cmd="douban" title="分享到豆瓣网">&#xe67c;</a>
-						</div>
-						<script type="text/javascript">
-						window._bd_share_config={
-							"common":{
-								"bdSnsKey":{},
-								"bdText":"",
-								"bdMini":"2",
-								"bdMiniList":false,
-								"bdPic":"",
-								"bdStyle":"0",
-							},
-							"share":{},
-							"image":{
-								"viewList":["weixin","qzone","sqq","tsina","tqq","douban"],
-								"viewText":"分享到：","viewSize":"16"
-							},
-							"selectShare":{
-								"bdContainerClass":null,
-								"bdSelectMiniList":["weixin","qzone","sqq","tsina","tqq","douban"]
-							}
-						};
-						with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-						</script>
-					</section>
-					<div class="f-r"><a class="btn btn-primary" href="#">新闻手机客户端</a></div>
-				</article>
-				<article class="nextpage cl mt-20"> 
-					<!--要进行截字处理--> 
-					<span class="pageup">上一篇：<a class="maincolor" href="#">色彩丰富的现代时尚卫生间装修设计</a> </span> <span class="pagenext">下一篇：没有了 </span> </article>
-				<article class="otherNews mt-20">
-					<div class="title_1">
-						<h2>相关阅读</h2>
-					</div>
-					<ul class="tlist f-14 l24 mt-5">
-						<li class="dot_1"><a class="maincolor" target="_blank" href="#">卫浴用品 装点的不仅仅是生活</a><span class="time pl-10">2013-04-19 10:50</span></li>
-						<li class="dot_1"><a class="maincolor" target="_blank" href="#">五种风格迥异的浴室装修 给生活极致的美学享受</a><span class="time pl-10">2013-04-09 10:30</span></li>
-						<li class="dot_1"><a class="maincolor" target="_blank" href="#">卫生间高效利用 让小空间智慧增容</a><span class="time pl-10">2013-04-03 10:26</span></li>
-						<li class="dot_1"><a class="maincolor" target="_blank" href="#">全球知名浴室空间大锦集</a><span class="time f-12 pl-10">2013-03-05 16:35</span></li>
+					</nav>
+				</div>
+
+		</header>
+
+<!-- 		<div class="contain-main-wraper">
+			<div class="Hui-wraper pt-20">
+				<div class="clearfix"> <a href="#"><i class="iconpic iconpic-logo f-l hidden-xs"></i></a>
+					<div class="AD-img f-r hidden-xs hidden-sm"> 
+					<a href="" target="_blank" rel="nofollow"><img class="lazyload" data-original="http://www.jigao616.com/temp/weiquan.gif" width="700px" height="70px" src="http://www.jigao616.com/temp/weiquan.gif" style="display: inline;"></a> 
+					</div>	
+				</div>
+				<nav class="nav navbar-nav navbar-mainnav hidden-xs">	
+					<ul class="clearfix">
+						<li class="current"><a href="http://www.jigao616.com/">首页</a></li> 		
+						<li class=""><a href="http://www.jigao616.com/tuijian/xincailiao/" title="新材料">新材料</a></li>
+						<li class=""><a href="http://www.jigao616.com/tuijian/jieneng/" title="节能环保">节能环保</a></li>	
 					</ul>
-				</article>
-				<article class="comment_form mt-20">
-					<div class="title_1 cl">
-						<h2 class="l">网友评论:</h2>
-						<span class="r"><a href="#">已有 <span class="c_red">0</span> 条评论，点击查看</a></span> </div>
-					<form name="feedback" method="post" action="#">
-						<div class="face cl mt-5"> <span class="face201" title="高兴"></span> <span class="face202" title="发怒"></span> <span class="face203" title="流汗"></span> <span class="face204" title="鄙视"></span> <span class="face205" title="奸笑"></span> <span class="face206" title="强"></span> <span class="face207" title="弱"></span> <span class="face208" title="玫瑰"></span> <span class="face209" title="大便"></span> <span class="face210" title="吻"></span> </div>
-						<div class="mt-10">
-							<textarea class="textarea" style="color:#000" onFocus="change()" id="cmt_content" name="msg"></textarea>
+				</nav>	    
+			</div>
+		</div> -->
+
+		<div id="slider-3">
+			<div class="slider">
+				<div class="bd">
+					<ul>
+						<li><a href="#" target="_blank"><img src="/app/public/static/images/banner-1.jpg" ></a></li>
+						<li><a href="#" target="_blank"><img src="/app/public/static/images/banner-2.jpg" ></a></li>
+						<li><a href="#" target="_blank"><img src="/app/public/static/images/banner-1.jpg" ></a></li>
+						<li><a href="#" target="_blank"><img src="/app/public/static/images/banner-2.jpg" ></a></li>
+					</ul>
+				</div>
+				<ol class="hd cl dots">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ol>
+			</div>
+		</div>	
+
+
+		<div class="article-wraper">
+
+			<section class="Hui-wraper crumb_search cl">
+				<nav class="crumbbar l">
+					<a class="logo" title="网站名称新闻" href="/"></a>
+					<span> <a href="/">首页</a>&gt;<a href="#">新闻中心</a>&gt;<a href="#">二级频道</a>&gt;正文</span>
+				</nav>
+				<article class="searchbar r">
+					<form class="form-search">
+						<div class="input-append">
+							<input type="text" class="input-text" style="width:237px">
+							<button type="submit" class="btn btn-primary">搜索</button>
 						</div>
-						<div class="loginbar cl"> <span id="onlinetips" class="l"><b><a href="avascript:login();">登录</a> - <a href="javascript:register();">注册</a> </b>不登录为匿名人士（请遵守<a class="maincolor" target="_blank" href="#">相关规定</a>)</span> <span class="r">
-							<input type="button" class="btn btn-primary size-S" onClick="checkSubmit()" value="发表评论" name="" id="cmt_post_btn">
-							</span> </div>
-						<p class="alert alert-info mt-10">同时您也可以关注我们的<a href="#">官方微博</a>，微信，手机客户端。</p>
 					</form>
 				</article>
 			</section>
-			<aside class="sd">
-      <section class="mb-10"><a href="#" target="_blank" rel="nofollow"><img src="http://images.h-ui.net/www/AD-300x250.gif" width="300" height="250"></a></section>
-      <section class="mb-10">
-        <iframe name="alimamaifrm" frameborder="0" marginheight="0" marginwidth="0" border="0" scrolling="no" width="300" height="170" src="http://www.taobao.com/go/app/tbk_app/chongzhi_300_170.php?pid=mm_10064336_3441941_11163339&page=chongzhi_300_170.php&size_w=300&size_h=170&stru_phone=1&stru_game=1&stru_travel=1&size_cat=std" ></iframe>
-      </section>
-      <section class="grayborder mb-10">
-        <div class="title_1 mb-10">
-          <h2><a class="maincolor" href="#">热点文章</a></h2>
-        </div>
-        <ol class="top-list cl">
-          <li class="top"><em>1</em><a href="#">排行榜列表</a><span class="date">12</span></li>
-          <li class="top"><em>2</em><a href="#">排行榜列表</a><span class="date">12</span></li>
-          <li class="top"><em>3</em><a href="#">排行榜列表</a><span class="date">12</span></li>
-          <li><em>4</em><a href="#">排行榜列表</a><span class="date">12</span></li>
-          <li><em>5</em><a href="#">排行榜列表</a><span class="date">12</span></li>
-          <li><em>6</em><a href="#">排行榜列表</a><span class="date">12</span></li>
-          <li><em>7</em><a href="#">排行榜列表</a><span class="date">12</span></li>
-          <li><em>8</em><a href="#">排行榜列表</a><span class="date">12</span></li>
-          <li><em>9</em><a href="#">排行榜列表</a><span class="date">12</span></li>
-          <li><em>10</em><a href="#">排行榜列表</a><span class="date">12</span></li>
-        </ol>
-      </section>
-      <section class="mb-10"><a href="#" target="_blank" rel="nofollow"><img src="http://images.h-ui.net/www/AD-300x250.gif" width="300" height="250"></a></section>
-    </aside> 
-		</div>
-	</div>
-	<footer class="footer">
-  <p>Copyright &copy;2013-2016 H-ui.net All Rights Reserved. <br>
-<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">京ICP备15015336号-1</a><br>
-未经允许，禁止转载、抄袭、镜像<br>用心做站，做不一样的站</p>
-</footer>
-\
-<script type="text/javascript" src="http://static.h-ui.net/www/home/js/article.js"></script>
-<script>
 
+			<div class="clearfix Hui-wraper ct2">
+				
+	<style>
+/*		.job-nav{ position:absolute; left:372px; top:0px}
+.job-nav li{ font-size:16px; line-height:48px; float:left; display:inline-block; margin:0 29px; position:relative}
+.job-nav li a{ display:inline-block}
+.job-nav li a:hover{ text-decoration:none; color:#333}
+.job-nav li.current a{ border-bottom:2px solid #ff8600; color:#ff8600}
+.job-nav li .dot{ position:absolute; right:-8px; top:13px}
+.myResume{ position:absolute; right:0; top:0; line-height:50px; font-size:14px}*/
+
+.job-list .item{ margin-top:20px; position:relative}
+.job-list .item .item-body{ padding:20px 25px}
+.job-list .item .job-body-left{float:left; width:320px}
+.job-list .item .job-body-right{ width:203px; float:right; padding-left:72px; position:relative}
+.job-list .item .job-body-right .pic-box{ position:absolute; top:0; left:0; width:52px; height:52px; border:solid 1px #edecec; border-radius:2px; overflow:hidden}
+.job-list .item .job-body-right .pic-box img{ display:block;width:52px; height:52px;border-radius:2px}
+.jobs-price{ font-family:DIN}
+
+.job-list .item .item-footer{ background-color:#fafafa; height:28px; line-height:28px; padding:11px 25px}
+.job-list .item .job-slogn{ float:left; line-height:28px; width:320px; font-size:14px; color:#666}
+.job-list .item .job-tags {float:right;width:275px; height:28px; overflow:hidden}
+.job-tags {font-size:0; line-height:0}
+.job-tags span{ display:inline-block; line-height:26px; font-size:14px; color:#666; padding:0 10px; border:solid 1px #ededed; margin-right:10px; background-color:#fff; border-radius:16px; margin-bottom:10px}
+.job-list .item .job-tags span{ margin-bottom:0}
+.job-list .item .iconpic-jingxuan{ position:absolute; z-index:1; right:0; top:0}
+.pageNav-wrap{ margin-top:20px}
+.iconpic-jingxuan{ width:37px; height:37px;  background-image:url(/app/public/h-ui/images/iconpic-jingxuan.png)}
+
+	</style>
+			<section class="mn">
+					<div id="zuixin-zhaopin" class="job-list index-jobs-list">
+						<div class="item bg-fff box-shadow radius">
+							<i class="iconpic iconpic-jingxuan"></i>
+							<div class="item-body clearfix">
+								<div class="job-body-left">
+									<div class="job-name">
+										<a href="" target="_blank" class="f-18 c-282828 text-overflow" style="display:inline-block;max-width:370px; vertical-align:sub">平面设计师(广州) </a> <span class="f-14 c-999">1天前发布</span>
+									</div>
+									<div style="margin-top: 6px">
+										<strong class="f-18 jobs-price" style="color: #ff8600">6k-8k</strong><span class="ml-10 f-14 c-666">经验不限 / 大专</span>
+									</div>
+								</div>
+
+								<div class="job-body-right">
+									<div class="pic-box opacity">
+										<a href="" target="_blank"><img src="http://img.zcool.cn/community/00295059dee412a80121ae0cd29682.jpg"></a>
+									</div>
+									<div class="company-name">
+										<a href="" target="_blank" class="f-18 c-282828">店与面创意</a>
+									</div>
+									<div class="f-14 c-666 text-overflow" style="margin-top: 10px">艺术/其他/成长型(C轮)</div>
+								</div>
+							</div>
+							<div class="item-footer">
+								<div class="job-slogn text-overflow">多家品牌500强企业创新战略长期合作伙伴</div>
+								<div class="job-tags">		
+									<span>福利多</span>									
+									<span>年终分红</span>									
+									<span>带薪年假</span>							
+									<span>五险一金</span>						
+									<span>弹性工作</span>						
+									<span>定期体检</span>					
+									<span>领导好</span>					
+									<span>津贴福利</span>					
+									<span>午餐补助</span>				
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<aside class="sd">
+					<section class="mb-10">
+						<a href="#" target="_blank" rel="nofollow"><img src="http://images.h-ui.net/www/AD-300x250.gif" width="300" height="250" data-bd-imgshare-binded="1"></a>
+					</section>
+
+					<div class="maskWraper mb-20" style="width:300px; height:250px; border:solid 1px #ddd;"> 
+						<img src="http://images.h-ui.net/www/AD-300x250.gif" width="300" height="250">
+						<div class="maskBar text-c">遮罩条</div>
+					</div>
+
+					<div id="HuiTab-demo1" class="HuiTab">
+						<div class="tabBar clearfix">
+							<span>选项卡一</span>
+							<span>选项卡二</span>
+							<span>自适应宽度</span>
+						</div>
+						<div class="tabCon">内容一</div>
+						<div class="tabCon">内容二</div>
+						<div class="tabCon">内容三</div>
+					</div>
+
+					<ul id="Huifold1" class="Huifold">
+					  <li class="item">
+					    <h4>标题<b>+</b></h4>
+					    <div class="info"> 内容<br>很多内容 </div>
+					  </li>
+					  <li class="item">
+					    <h4>标题<b>+</b></h4>
+					    <div class="info"><img src="/app/public/static/images/2.png" ></div>
+					  </li>
+					  <li class="item">
+					    <h4>标题<b>+</b></h4>
+					    <div class="info"><img src="/app/public/static/images/1.png" ></div>
+					  </li>
+					</ul>
+<style>
+	/*左侧边栏*/
+.index-left-aside{ float:left; width:260px;}
+.side-left{width:260px;z-index:9}
+	/*菜单*/
+	.index-aside-menu{ background-color:#fff; }
+	.index-aside-menu .item{padding:20px 25px;border-bottom:solid 1px #ededed}
+	.index-aside-menu .item .dt{ font-size:18px;font-weight:400}
+	.index-aside-menu .item .dd{ margin-top:5px}
+	.index-aside-menu .item .dd a{ line-height:24px; font-size:14px; display:block; float:left; width:33.333%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap; color:#666; margin-top:8px}
+	.index-aside-menu .item .dd a:hover{ color:#ff8600}
+
+/*右侧内容*/	
+.index-article{ float:right; width:790px}
+
+</style>
+					<div class="index-aside-menu bg-fff box-shadow radius">
+						<div class="item">
+							<div class="dt">设计方向</div>
+							<div class="dd clearfix">
+								<a href="javascript:doSearchType('平面');">平面</a>
+								<a href="javascript:doSearchType('UI');">UI</a>
+								<a href="javascript:doSearchType('视觉');">视觉</a>
+								<a href="javascript:doSearchType('网页');">网页</a>
+								<a href="javascript:doSearchType('原画');">原画</a>
+								<a href="javascript:doSearchType('插画');">插画</a>
+								<a href="javascript:doSearchType('动画');">动画</a>
+								<a href="javascript:doSearchType('游戏UI');">游戏UI</a>
+								
+							</div>
+						</div>
+					</div>
+<style>
+.iconpic-arrow-right-2 {
+    width: 25px;
+    height: 22px;
+    background-image: url(/app/public/h-ui/images/iconpic-arrow-right-2.png);
+}
+</style>
+					<div class="bg-fff box-shadow radius mt-20">
+						<a href="" target="_blank" style="display:block;color:#282828;padding:18px 25px" class="clearfix">
+							<span class="f-18 va-m f-l">职位订阅</span>
+							<i class="f-r va-m iconpic iconpic-arrow-right-2"></i>
+						</a>
+
+					</div>
+<style>	
+
+	/*客服*/
+		#index-aside-kefu .panel-header{border-left:solid 0px #333;}
+		#index-aside-kefu .panel-header{ border-bottom:none}
+		#index-aside-kefu .panel-body{ padding-top:0}
+		#index-aside-kefu ul li{ padding-left:30px; position:relative; color:#666; font-size:14px; padding-bottom:13px; line-height:24px}
+		#index-aside-kefu ul li .iconpic{ position:absolute; top:7px; left:0}
+		.iconpic-tel3{ width:18px; height:18px; background-image:url(/app/public/h-ui/images/iconpic-tel3.png)}
+		.iconpic-qq2{ width:18px; height:18px; background-image:url(/app/public/h-ui/images/iconpic-qq2.png)}
+
+	#index-aside-kefu	.panel{ background-color:#fff}	
+	#index-aside-kefu .panel-header{font-size:18px;padding:0 25px;line-height:56px;position:relative;border-top-left-radius:2px;border-top-right-radius:2px;}
+	#index-aside-kefu .panel-body{ padding:22px 25px;border-bottom-left-radius:2px; border-bottom-right-radius:2px}
+	#index-aside-kefu .panel-footer{background-color: #f5f5f5;border-top: 1px solid #ddd;padding:5px 20px}
+
+</style>
+
+					<div id="index-aside-kefu" class="bg-fff box-shadow radius mt-20 panel panel-default">
+						<div class="panel-header">
+							联系客服
+						</div>
+						<div class="panel-body">
+							<ul>
+								<li><i class="iconpic iconpic-tel3"></i>010-56538300<br>周一至周五 10:00-18:30</li>
+								<li style="padding-bottom:0"><i class="iconpic iconpic-qq2"></i>在线客服QQ：800036486<br>周一至周五 10:00-18:30</li>
+							</ul>
+						</div>
+					</div>
+
+					<section class="panel panel-default mt-30">
+						<div class="panel-header"><a href="" title="">浙江大学专利</a></div>
+						<div class="panel-body">
+							<ul class="text-list">
+								<li class="item text-overflow"> <i class="iconpic iconpic-dot va-m"></i> <a target="_blank" href="" title=" ">基于桥梁振动的摩擦式静电发</a> </li>
+							</ul>
+						</div>
+					</section>
+					<section class="grayborder mb-10">
+				        <div class="title_1 mb-10">
+				          <h2><a class="maincolor" href="#">热点文章</a></h2>
+				        </div>
+				        <ol class="top-list cl">
+				          <li class="top"><em>1</em><a href="#">排行榜列表</a><span class="date">12</span></li>
+				          <li class="top"><em>2</em><a href="#">排行榜列表</a><span class="date">12</span></li>
+				          <li class="top"><em>3</em><a href="#">排行榜列表</a><span class="date">12</span></li>
+				          <li><em>4</em><a href="#">排行榜列表</a><span class="date">12</span></li>
+				          <li><em>5</em><a href="#">排行榜列表</a><span class="date">12</span></li>
+				        </ol>
+			      </section>
+
+				</aside>
+			</div>
+
+			<div class="flink-wraper">
+				<div class="Hui-wraper">
+					<div class="flink-title">友情链接</div>
+					<div class="flink-list-text"> 	
+					    <a href="h" title="专利查询" target="_blank">专利查询</a>
+					    <a href="" title="专利查询系统" target="_blank">专利查询系统</a>
+					    <a href="" title="中国技术市场报" target="_blank">中国技术市场报</a>
+					    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=270863798&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:270863798:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="container-fluid">
+				<nav>		    
+		    		<a href="">关于我们</a>
+		    		<span class="\&quot;pipe\&quot;">|</span>
+		    		<a href="">联系我们</a> 
+		    		<span class="\&quot;pipe\&quot;">|</span>
+		    		<a href="">隐私保护</a>
+		    		<span class="\&quot;pipe\&quot;">|</span>
+		   			<a href="">免责声明</a> 
+		   			<span class="\&quot;pipe\&quot;">|</span>
+		    		<a href="http://www.jigao616.com/about_46.aspx">支付方式</a>
+		    		<span class="\&quot;pipe\&quot;">|</span>
+					<a href="">最新专利</a> <span class="pipe">|</span><a href="">专利权人名单</a> <span class="pipe">|</span><a href="">专利下载排行</a>
+				</nav>
+				<p>Copyright © 2017 All Rights Reserved. <br> <a href="" target="_blank" rel="nofollow">津ICP备16005673号-1</a> 津公网安备 12010002000008号 技高德科技（天津）有限公司版权所有</p>
+			</div>
+		</footer>
+	</div>
+
+
+	<script>
+		
+
+		$("#HuiTab-demo1").Huitab({
+			//tabEvent:"mousemove",
+			index:0
+		});
+
+		$(function(){
+			$.Huitotop();
+		});
+
+		$(function(){
+			jQuery("#slider-3 .slider").slide({
+				mainCell:".bd ul",
+				titCell:".hd li",
+				trigger:"click",
+				effect:"leftLoop",
+				autoPlay:true,
+				delayTime:700,
+				interTime:7000,
+				pnLoop:false,
+				titOnClassName:"active"
+			})
+		});
+
+		$(function(){
+			$.Huifold("#Huifold1 .item h4","#Huifold1 .item .info","fast",1,"click"); /*5个参数顺序不可打乱，分别是：相应区,隐藏显示的内容,速度,类型,事件*/
+		});
+
+		$(function () {
+			$('.maskWraper').Huihover();
+		});
+	</script>
 
 </body>
 </html>
