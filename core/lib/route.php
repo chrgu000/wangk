@@ -9,9 +9,9 @@ class Route{
 		//htaccess设置
 		//路由分析  /    index.php/Home/Index/index/id/1		
 		$path = $_SERVER['REQUEST_URI'];
+// dump($_REQUEST);	
 		if(isset($path) && $path!='/'){
-			$pathArr = explode('/', ltrim($path,'/'));
-			
+			$pathArr = explode('/', ltrim($path,'/'));		
 			//重置路由
 			if(isset($pathArr[0])){
 				$this->module = $pathArr[0];

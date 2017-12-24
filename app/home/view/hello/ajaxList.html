@@ -1,0 +1,106 @@
+<html>
+
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/3.1/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui.admin/3.1/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/www/home/css/H-ui.doc.css" />
+<link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/Hui-iconfont/1.0.8/iconfont.min.css" />
+<script type="text/javascript" src="http://lib.h-ui.net/jquery/1.9.1/jquery.min.js"></script>
+
+<head>
+	<meta charset="UTF-8">
+	<title>分页</title>
+</head>
+<style>
+	.current{
+		color: red;
+		font-size: 14px;
+	}
+
+</style>
+<body>
+	<section class="Hui-article-box">
+		<header class="navbar-wrapper">
+			<div class="navbar navbar-black">
+				<div class="container-fluid cl"> <a class="logo navbar-logo hidden-xs" href="/aboutHui.shtml">My UI</a> 
+					<nav id="Hui-nav" class="nav navbar-nav">
+						<ul class="cl">
+							<li id="Huinav_1"> <a href="/index.shtml">首页</a> </li>
+							<li id="Huinav_5"> <a href="/cases/index.shtml">分页案例</a> </li>
+						</ul>
+					</nav>
+					
+				</div>
+			</div>
+		</header> 
+
+
+
+		<nav class="breadcrumb">
+			<i class="Hui-iconfont"></i> <a class="maincolor" href="/">首页</a>
+			<span class="c-999 en">&gt;</span>分页<span class="c-999 en">&gt;</span>
+		</nav>
+
+		<div class="Hui-article">	
+		    <div class="codeView docs-example">
+		        <table class="table table-border table-bordered table-striped">
+		            <!-- title -->
+		            <thead>
+		              <tr>
+		                <th>id</th>
+		                <th>商品名</th>
+		                <th>添加时间</th>
+		              </tr>
+		            </thead>
+		            <!-- content -->
+		            <tbody>
+						
+			              <tr>
+			                <th>1</th>
+			                <td>hell0</td>
+			                <td>123456</td>
+			              </tr>
+		            	
+
+		            </tbody>
+		        </table>
+		    </div>
+
+		    <div>
+		    	<div>
+		    		<a href="/home/hello/goodsList/?&amp;page=7">首 页</a>	
+			    	&nbsp;<a href="javascript:void(0)" class="current">1</a>&nbsp;&nbsp;
+			    	<a href="/home/hello/goodsList/?&amp;page=2">2</a>&nbsp;&nbsp;
+			    	<a href="/home/hello/goodsList/?&amp;page=3">3</a>&nbsp;&nbsp;
+			    	<a href="/home/hello/goodsList/?&amp;page=7">尾 页</a>		    
+		    	</div>
+		    </div>
+		</div>
+	</section>
+
+	<script>
+		var page = 1;
+		var pageSize= 5;
+		$.ajax({
+		  type:'get',
+		  url: "/home/hello/ajaxData/page/"+page+'/pageSize/'+pageSize,
+		  // url: "/home/hello/ajaxData",
+		  // data: {
+		  //   page:page,pageSize:pageSize 
+		  // },
+		  success: function(result) {
+		   	console.log(result);
+		  }
+		});
+
+	</script>
+</body>
+</html>

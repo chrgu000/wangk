@@ -13,7 +13,12 @@ centos的快捷键
  /etc/sysconfig/network-scripts/ifcfg-enp0s3
  /etc/resolv.conf
  yum install wget
- service network restart\
+ service network restart
+
+//设置网络模式:桥接
+  界面：fanmily controller 
+  混杂模式：允许介入虚拟电脑
+  接入网线：允许
 
 源  http://mirrors.163.com/.help/CentOS7-Base-163.repo
     替换源
@@ -138,3 +143,87 @@ ssh
 		tar -czvf test.tar.gz a.c   //压缩 a.c文件为test.tar.gz
 		tar -tzvf test.tar.gz	    //列表
 		tar -xzvf test.tar.gz a.c   //解压文件
+
+      
+      系统用户命令操作
+	useradd jim
+	cd /home/  ll 查看
+	userdel jim
+	rm -rf 
+	useradd tom
+	passwd  tom
+	userdel -r tom
+	##用户访问权限
+
+
+	防护墙:保护防护墙安全
+	   设置防护墙规则：开放80,22端口，43https
+	   关闭防护墙
+	   安装：yum install firewalld
+	   启动：service firewlld start
+	   检查状态：service firewalld status
+	   关闭或者禁用防火墙：service firewalld stop/disable
+	   cen7默认安装好了防火墙，查看如下
+	   yum list |grep firewall
+	   ps -ef |grep firewall
+
+	   firewall-cmd --version/help/status
+	   firewall-cmd --get-default-zone
+	   firewall-cmd --list-get-all-zone
+	  
+	   //设置同一个ssh服务
+	   firewall-cmd --query-service=ssh
+	   firewall-cmd --remove-service=ssh
+	   firewall-cmd --add-service=ssh
+
+	   firewall-cmd --list-services
+	   //服务和端口设置类似 只设置一个即可
+	   firewall-cmd --list-ports
+
+	
+
+	##root和普通用户之间的切换
+	exit
+	su - root
+
+
+	提权和文件的上传下载
+	  //尝试在wangk账户下安装vim 提示无权限
+	  wangk中：sudo
+	  root中： visudo
+		G
+		## Allows people in group wheel to run all commands
+		%wheel  ALL=(ALL)       ALL
+		%wangk  ALL=(ALL)       ALL
+	
+	文件的下载
+		线上：
+		wget http://www.baidu.com   //tmp   vi
+		服务器本地文件和文件传输
+		1.服务器1本地-》服务器2
+		scp hello.txt wangkai@192.168.100.30:/tmp/
+		2.服务器2-》服务器1本地
+		scp  wangkai@192.168.100.30:/tmp/hello.txt ./
+	       
+	       使用xshell
+	       sudo yum install lrzsz
+	       rz  //windows本地上传到服务器上
+	       sz hi.txt //服务器上文件到windows
+
+	 
+
+	Apach的安装
+	   yum instalL httpd 
+	   service  httpd start
+	   //端口
+	   sudo netstat -anpl |grep 'http'
+	   sudo service firewalld stop
+	   //虚拟主机
+
+	   //伪静态
+
+
+	Ngix的安装
+
+
+	

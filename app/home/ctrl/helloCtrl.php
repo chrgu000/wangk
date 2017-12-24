@@ -103,5 +103,20 @@ class helloCtrl extends Ctrl{
 	//dump($page);
 		$this->display('goodsList');
 	}
+
+	//ajax分页
+	public function ajaxList(){
+
+		$this->display('ajaxList');
+
+	}
+
+	public function ajaxData(){
+		$data['page'] = $page = $_REQUEST['page'];
+		$data['pageSize'] = $pageSize = $_REQUEST['pageSize'];
+		echo json_encode($data);
+		exit;
+
+	}
 }
 
