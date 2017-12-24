@@ -219,8 +219,19 @@ ssh
 	   sudo netstat -anpl |grep 'http'
 	   sudo service firewalld stop
 	   //虚拟主机
+	     当文件是readonly模式时 ctrl+z退出
+	     1.sudo 提权
+	     2.sudo chown -R wangk /usr/meng   //改变文件的所有者
+
+	<VirtualHost >
+		ServerName www.test.wk
+		DocumentRoot /var/www/project
+	</VirtualHost>
 
 	   //伪静态
+	    /etc/httpd/conf
+	    /etc/httpd/conf.d
+	    /etc/hosts
 
 
 	Ngix的安装
