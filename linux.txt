@@ -223,9 +223,13 @@ ssh
 	     1.sudo 提权
 	     2.sudo chown -R wangk /usr/meng   //改变文件的所有者
 
-	<VirtualHost >
+	<VirtualHost>
 		ServerName www.test.wk
-		DocumentRoot /var/www/project
+		DocumentRoot "/var/www/project"
+		#<Directory />
+		<Directory "/var/www/project">
+			Allow from all
+		</Directory>
 	</VirtualHost>
 
 	   //伪静态
@@ -233,7 +237,25 @@ ssh
 	    /etc/httpd/conf.d
 	    /etc/hosts
 
+	    LoadModule rewrite_module modules/mod_rewrite.so
+		1.AllowOverride None
 
+		##参考
+			vi /etc/httpd/conf/httpd.conf  #编辑
+			<Directory "/var/www/html">
+			    Options Includes ExecCGI FollowSymLinks
+			    AllowOverride All
+			    Order allow,deny
+			    Allow from all
+				<IfModule mod_rewrite.c>
+				    RewriteEngine On
+				    RewriteBase /
+				    RewriteRule ^index\.php$ - [L]  //RewriteRule ^(.*).jsp$ index.html
+				    RewriteCond %{REQUEST_FILENAME} !-f
+				    RewriteCond %{REQUEST_FILENAME} !-d
+				    RewriteRule . /index.php [L]
+				</IfModule>
+			</Directory>
 	Ngix的安装
 
 
