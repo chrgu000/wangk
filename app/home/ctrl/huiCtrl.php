@@ -20,6 +20,12 @@ class HuiCtrl extends Ctrl{
 	public function layout(){
 		$this->display('layout');
 	}
+
+	//
+	public function parts(){
+		$this->display('parts');
+	}
+	
 	
 }
 

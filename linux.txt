@@ -249,14 +249,131 @@ ssh
 			    Allow from all
 				<IfModule mod_rewrite.c>
 				    RewriteEngine On
-				    RewriteBase /
-				    RewriteRule ^index\.php$ - [L]  //RewriteRule ^(.*).jsp$ index.html
+				    RewriteRule ^(.*).jsp$ index.html
+
+				    <!-- RewriteBase /
+				    RewriteRule ^index\.php$ - [L]  
 				    RewriteCond %{REQUEST_FILENAME} !-f
 				    RewriteCond %{REQUEST_FILENAME} !-d
-				    RewriteRule . /index.php [L]
+				    RewriteRule . /index.php [L] -->
 				</IfModule>
 			</Directory>
 	Ngix的安装
+
+
+
+
+
+	MYSql的安装
+		先移除默认数据库 
+		yum list *db
+		yum search mysql
+		yum remove mariadb-libs.x86_64
+
+		下载mysql源
+		  https://dev.mysql.com/downloads/repo/yum/
+		  复制页面的链接地址 redhat
+		  https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+		  cd /tmp/
+		  wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+
+		安装源
+		  yum localinstall mysql57-community-release-el7-11.noarch.rpm //对应下载的rpm
+		 
+
+		安装mysql的服务
+		  yum search mysql
+		  yum install mysql-community-server.x86_64//安装mysql-server #slowly
+		  ps -ef |grep ssh//查看服务是否起来了
+		  service mysqld status/start/stop/restart
+		设置默认密码
+		  cat /var/log/mysqld.log | grep password   //获取初始密码
+		  mysql -uroot -pXXXXXX
+		  ##基本操作
+		        @Linux下mysql表和字段的大小写：http://blog.csdn.net/ygl6150373/article/details/53208232 
+			show databases; //提示必须重置密码 ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement
+			--------从mysql服务中退出 exit; 再次进入 mysql -u -p---------
+			set password=password('123456'); //第一次安装成功后的设置
+			//ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+			set global validate_password_policy=0;
+			set global validate_password_length=1;//http://blog.csdn.net/kuluzs/article/details/51924374
+			history//查看历史操作的cmd
+			mysql -h127.0.0.1 -uroot -p123456
+
+		扩展
+		  开启远程连接
+		        配置并连接远程数据库//error
+			show databases;=>use mysql;=>show tables;=>
+			select * from user \G;
+			select Host,User from user \G;//显示3条记录 修改root的host，变为允许任何访ip问
+			update user set Host='%' where Host='localhost' and user='root';
+			//再次查询  再次链接 //error: a.  b.本地不允许访问
+				1.刷新权限或者重启mysqld
+					flush privileges;
+					sudo service mysqld restart;  //再次链接：lost mysql conn pactet
+				2.防火墙
+					ps -ef | grep firewalld
+					service firewalld stop/start
+
+			        3.###关闭navcat，重新链接###
+				
+		  开启genelog
+			set global general_log_file="/tmp/general.log"; //设置其他目录下则需要权限
+			set global general_log=on;
+			set global general_log=off;//关闭
+
+		  新建用户和权限的设置
+			create user 'wangk'@'%' identified by '123456';
+			set global validate_password_policy=0;
+			set global validate_password_length=1;
+			create user 'wangk'@'%' identified by '123456';
+			//链接进入 看到一张表  此处需要赋予权限
+			grant all privileges on *.* to 'wangk'@'%' identified by '123456' with grant option;
+			flush privileges;
+			//nav 退出重连
+			##缩小权限的操作
+			   grant all select,update on *.* to 'wangk'@'%' identified by '123456' with grant option;
+			##收回权限
+			   revoke all privileges on *.* from wangk;
+		  忘记密码处理
+		        1.去修改mysql配置文件
+			vi /etc/my.cnf
+			skip-grant-tables
+			sudo service mysqld restart //跳过安全认证
+			//进入user表修改 不能使用第一次的set
+			update user set authentication_string=password('1234567') where user='root';
+			flush privileges;
+			#skip-grant-tables//关闭之前的验证忽视
+			sudo service mysqld restart
+		客户端工具
+		   SQLyog
+		   navicat
+		   phpAdmin
+
+	缓存服务：memcached / redis
+	    memcached
+		yum istall memcached
+		man memcached
+		ps -ef |grep memcached
+		memcached -p -l -m -d //开启服务 @混淆 service memcached +
+		ps -ef |grep memcached
+		sudo netstat -anpl |grep mem  //产看监听的端口11211
+
+		##telnet##测试端口  发送报文数据至服务器
+		     telnet 127.0.0.1 80
+		     //bash: telnet: command not found
+		     安装
+		      sudo yum install telnet.*
+		      telnet 127.0.0.1 80
+		      telnet 127.0.0.1 3306
+
+		      telnet 127.0.0.1 11211//发送报文
+		      set/add wangk 0 60 5 //回车换行
+		      hello //输入要存储的数据
+		      get hello
+		      delete wangk
+		      Ctrl+c //退出 在开启服务的地方
+
 
 
 	
