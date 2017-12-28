@@ -206,9 +206,9 @@ ssh
 		scp  wangkai@192.168.100.30:/tmp/hello.txt ./
 	       
 	       使用xshell
-	       sudo yum install lrzsz
-	       rz  //windows本地上传到服务器上
-	       sz hi.txt //服务器上文件到windows
+		       sudo yum install lrzsz
+		       rz         //windows本地上传到服务器上
+		       sz hi.txt //服务器上文件到windows
 
 	 
 
@@ -347,7 +347,7 @@ ssh
 			sudo service mysqld restart
 		客户端工具
 		   SQLyog
-		   navicat
+		   navicat  http://blog.csdn.net/mtbaby/article/details/56836986 //链接失败处理
 		   phpAdmin
 
 	缓存服务：memcached / redis
@@ -368,11 +368,113 @@ ssh
 		      telnet 127.0.0.1 3306
 
 		      telnet 127.0.0.1 11211//发送报文
-		      set/add wangk 0 60 5 //回车换行
+		      sudo set/add wangk 0 60 5 //回车换行 @需要提权
 		      hello //输入要存储的数据
 		      get hello
 		      delete wangk
 		      Ctrl+c //退出 在开启服务的地方
+
+	    redis？？？
+	    
+
+	 版本管理工具:Git   ！！！！
+		git与gitHub(基于git工具的平台社区)
+		操作
+		    //安装  cmd git无效
+		    sudo yum install  git
+		    //命令自动补全设置
+
+		    //常用命令
+
+       
+	
+	
+	php环境的搭建
+	   ##l(Linux-centos)a(apach webserver)m(mysql)p(fpm+php)
+	   基础环境的搭建
+	       yum search php
+	       yum info php //php5.4--5.6
+	       //如何进行版本的升级
+		 1.检查当前安装的PHP包
+			 yum list installed | grep php
+		 2.如果有安装的PHP包，先删除他们
+			 yum remove php.x86_64 php-cli.x86_64 php-common.x86_64 php-gd.x86_64 
+			 php-ldap.x86_64 php-mbstring.x86_64 php-mcrypt.x86_64 
+			 php-mysql.x86_64 php-pdo.x86_64
+	       //配置源 用源来替换旧的版本
+		 sudo rpm -Uvh http://mirror.webtatic.com/yum/el7/epel-release.rpm
+		 sudo rpm -Uvh http://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+		 如果想删除上面安装的包，重新安装
+		 rpm -qa | grep webstatic
+		 rpm -e  上面搜索到的包即可
+	      
+	      //fpm的安装
+		 yum search php 
+		 yum install php56w-fpm(也可以php55w-fpm  php70w-fpm) //fpm是php的进程管理器 撑起php的并发数量
+	            //检查安装
+		    php -v   //fail --》需要扩展
+		
+		 ##Rdeis/memcached/数据库扩展的安装
+		 扩展环境的搭建(php基础和其他服务的扩展)
+			 sudo yum install php56w.x86_64 php56w-cli.x86_64 php56w-common.x86_64 
+			 php56w-gd.x86_64 php56w-mbstring.x86_64 php56w-mcrypt.x86_64 
+			 php56w-mysql.x86_64 php56w-pdo.x86_64	
+		    //检查php以及fpm服务
+		    php -v //检查安装及版本  5.6
+		    ps -ef |grep fpm
+		    service php-fpm start //主进程+几个分进程(处理请求)
+
+
+
+	php项目的搭建
+	   TP5环境
+	      ##zip和unzip的安装
+		      XX yum install zip
+		      XX yum install unzip
+		      yum install -y unzip zip //正确的安装
+		      //重命名：mv ./tp5.zp
+		        //把/home目录下面的abc文件夹和123.txt压缩成为abc123.zip
+		        zip -r abc123.zip abc 123.txt
+		     //重启apach服务
+		     service httpd restart
+	   
+	      virturalHost设置
+	      //错误 mysql can not connet http://blog.csdn.net/lemon_tree12138/article/details/46562769
+	        httpd_can_network_connect --> off）
+		# getsebool -a | grep httpd
+		2. 修改httpd_can_network_connect的值为on
+		# setsebool httpd_can_network_connect 1
+
+		//STORAGE_WRITE_ERROR_:  http://www.thinkphp.cn/topic/22933.html  权限问题
+		sudo chown -R 777  /var/www/tp/Application/
+
+		//目录 [ ./Application/Runtime/ ] 不可写！  http://www.thinkphp.cn/topic/28469.html
+		@设置权限777后无效	
+		##可能是SELINUX的缘故，试下这个命令看看:
+		setenforce 0
+
+		##访问页面出错
+		路由设置||是否省了index.php/Home   --路由大小写的问题，tp已经做了处理--
+		@http://www.thinkphp.cn/topic/787.html  配置文件修改 allowoveride all
+		@.htaccess文件被隐藏了 可以直接按照路径访问
+	   phpAdmin搭建
+
+
+
+
+
+
+	  
+
+	  ###############add#####################
+	  权限管理
+
+	  定时任务
+
+	  数据库的定期备份
+		
+         
+
 
 
 
