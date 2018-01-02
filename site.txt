@@ -1,0 +1,57 @@
+/**************************4g.hzmylike.com**************************/
+FTP
+服务器　112.124.71.233　端口 21
+用户名 4ghzmylike
+密码	4ghzmylike99123
+
+MYSQL
+服务器 localhost
+用户名 4ghzmylike
+密码 4ghzmylike88123
+
+PHPMYADMIN
+http://112.124.71.233:8080/phpmyadmin/
+
+
+
+
+/**************************分站的数据库信息**************************/
+97
+http://cp.mylike-ps.com:8080/phpmyadmin/
+http://120.26.37.97:8080/phpmyadmin/
+//ftp信息
+
+
+/*********************新站主站(m.hzmylike.com)(233)**************************/
+数据库信息
+mhzmylike2
+mhzmylike1990
+http://cp.hzmylike.net:8080/phpmyadmin/
+http://112.124.71.233:8080/phpmyadmin/
+
+ftp信息
+112.124.71.233	 newmhzmylike	newmhzmylike99123
+
+http://m.hzmylike.cn/index.php/Home/doctor/detail/id/2.html
+
+
+
+以下为两台服务器的在线管理地址：
+http://cp.mylike-ps.com:8080/index.php   //97 
+user
+Ae3rTvxAJSS
+
+http://cp.hzmylike.net:8080/index.php //233
+user
+2WVDtUcLy2Y
+
+
+
+邮箱名：hzmylike818@163.com
+密码：ML2017818.
+授权码:mylike1225
+
+
+
+
+
