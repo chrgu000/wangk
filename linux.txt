@@ -335,6 +335,7 @@ ssh
 			   grant all select,update on *.* to 'wangk'@'%' identified by '123456' with grant option;
 			##收回权限
 			   revoke all privileges on *.* from wangk;
+			***让用户处理某个数据库的权限： http://blog.csdn.net/xuxile/article/details/53161908
 		  忘记密码处理
 		        1.去修改mysql配置文件
 			vi /etc/my.cnf

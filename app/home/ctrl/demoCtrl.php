@@ -6,7 +6,7 @@ class DemoCtrl extends Ctrl{
 
 	public function index(){
 		
-
+		1/0;
 	}
 
 	

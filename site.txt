@@ -25,6 +25,7 @@ http://120.26.37.97:8080/phpmyadmin/
 /*********************新站主站(m.hzmylike.com)(233)**************************/
 数据库信息
 mhzmylike2
+mhzmylike2
 mhzmylike1990
 http://cp.hzmylike.net:8080/phpmyadmin/
 http://112.124.71.233:8080/phpmyadmin/

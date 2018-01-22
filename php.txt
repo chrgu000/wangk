@@ -370,3 +370,17 @@ static
 27.商品属性表需要关联的表：库存量表 + 商品详情页的商品属性展示
 
 28.关于在一个控制器中去处理: 【用户是否登录】+【商品数据的两种存储】+【用户跳转的URL记录】+【用户提交的数据记录】
+
+29.微信开发的sdk
+https://www.oschina.net/p/wechat-sdk-php
+
+30.dedecms文章管理系统 v5.7
+https://jingyan.baidu.com/article/1876c852b8769e890b1376d4.html 解决默认勾选远程和缩图的问题
+select a.id,b.job,b.logo from dede_archives a left join dede_addontest b on a.id=b.aid where b.aid=108;
+$data4=M()->db(4,"DB_CONFIG4")->table("dede_archives")->field('a.id,b.logo')->alias('a')->join('left join dede_addontest b on a.id=b.aid')->where('b.aid=108')->select(); 
+
+31.ThinkPHP 多个应用 相互之间 调用Action
+http://www.thinkphp.cn/topic/10761.html
+
+32.关于tp的function的定义和调用
+http://www.mamicode.com/info-detail-1168391.html

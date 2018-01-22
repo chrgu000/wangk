@@ -11,7 +11,9 @@ class wangk{
 	}
 
 	public static function run(){
+	//p(1);
 		Log::init();//启动日志类
+	//p(2);
 		$route = new Route();//加载路由类	
 		$module = $route->module;
 		$ctrl = $route->ctrl;
@@ -19,8 +21,11 @@ class wangk{
 		self::$_route['module'] = $module;//static中记录_module
 		self::$_route['ctrl'] = $ctrl;//static中记录_module
 		self::$_route['action'] = $action;//static中记录_module
+	//p(self::$_route);
 		$ctrlFile = APP.'/'.$module.'/ctrl/'.$ctrl.'Ctrl.php';
 		$ctrlClass = '\\'.WEB_NAME.'\\'.$module.'\ctrl\\'.$ctrl.'Ctrl';
+	//p($ctrlFile);
+	//p($ctrlClass);
 		if(is_file($ctrlFile)){
 			require_once $ctrlFile;
 			$ctrlObj = new $ctrlClass();
@@ -35,7 +40,7 @@ class wangk{
 	*
 	*/
 	public static function load($class){
-//p($class);
+//p($class);exit;
 		//find: core/route.php
 		if(isset(self::$classMap[$class])){
 			return true;
@@ -49,7 +54,6 @@ class wangk{
 				return false;
 			}
 		}
-
 	}
 
 	

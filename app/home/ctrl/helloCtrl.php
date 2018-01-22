@@ -20,7 +20,6 @@ class helloCtrl extends Ctrl{
 		$this->assign('data',$data);
 		$this->assign('data2',$data2);
 		$this->display('hi');
-
 	}
 
 	public function index(){
