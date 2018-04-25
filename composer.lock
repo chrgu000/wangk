@@ -4,21 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3af90b4e45b70ff021c8657d057a5a76",
     "content-hash": "b4c3ca4da2679ae1fee9797b4c04e83b",
     "packages": [
         {
             "name": "catfan/medoo",
-            "version": "v1.5.2",
+            "version": "v1.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/catfan/Medoo.git",
-                "reference": "d65fad6c087e5904803e0dfd4e7a984d0eda77ef"
+                "reference": "a6b7b05b18fa7c8f955e259d491344b1db9a51bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/catfan/Medoo/d65fad6c087e5904803e0dfd4e7a984d0eda77ef.zip",
-                "reference": "d65fad6c087e5904803e0dfd4e7a984d0eda77ef",
+                "url": "https://files.phpcomposer.com/files/catfan/Medoo/a6b7b05b18fa7c8f955e259d491344b1db9a51bf.zip",
+                "reference": "a6b7b05b18fa7c8f955e259d491344b1db9a51bf",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +63,7 @@
                 "sql",
                 "sqlite"
             ],
-            "time": "2017-12-01 14:31:32"
+            "time": "2018-01-08T20:01:12+00:00"
         },
         {
             "name": "filp/whoops",
@@ -125,7 +124,7 @@
                 "throwable",
                 "whoops"
             ],
-            "time": "2017-11-23 18:22:44"
+            "time": "2017-11-23T18:22:44+00:00"
         },
         {
             "name": "psr/log",
@@ -172,7 +171,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10 12:19:37"
+            "time": "2016-10-10T12:19:37+00:00"
         },
         {
             "name": "smarty/smarty",
@@ -225,7 +224,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-12-14 21:57:25"
+            "time": "2016-12-14T21:57:25+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -284,20 +283,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-10-11 12:05:26"
+            "time": "2017-10-11T12:05:26+00:00"
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v3.4.2",
+            "version": "v3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "757074cf71b952ce9e75b557538948811c2bf006"
+                "reference": "545be7e78ccbec43e599f10ff7500d0b09eda9d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/var-dumper/757074cf71b952ce9e75b557538948811c2bf006.zip",
-                "reference": "757074cf71b952ce9e75b557538948811c2bf006",
+                "url": "https://files.phpcomposer.com/files/symfony/var-dumper/545be7e78ccbec43e599f10ff7500d0b09eda9d0.zip",
+                "reference": "545be7e78ccbec43e599f10ff7500d0b09eda9d0",
                 "shasum": ""
             },
             "require": {
@@ -353,7 +352,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2017-12-11 22:06:16"
+            "time": "2018-01-03T17:14:19+00:00"
         },
         {
             "name": "twig/twig",
@@ -418,7 +417,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-09-27 18:06:46"
+            "time": "2017-09-27T18:06:46+00:00"
         }
     ],
     "packages-dev": [],

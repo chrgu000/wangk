@@ -350,7 +350,6 @@ abstract class Twig_Template implements Twig_TemplateInterface
 
     protected function loadTemplate($template, $templateName = null, $line = null, $index = null)
     {
-        //echo $template,$templateName;
         try {
             if (is_array($template)) {
                 return $this->env->resolveTemplate($template);
@@ -363,7 +362,7 @@ abstract class Twig_Template implements Twig_TemplateInterface
             if ($template instanceof Twig_TemplateWrapper) {
                 return $template;
             }
-//exit;
+
             return $this->env->loadTemplate($template, $index);
         } catch (Twig_Error $e) {
             if (!$e->getSourceContext()) {
